@@ -1,0 +1,37 @@
+type: task_block
+title: typescript_lib_201ef8
+icon: https://static.oomol.com/icons/typescript.png
+executor:
+  name: node_executor
+  entry: index.ts
+inputs_def:
+  - handle: image_address
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+  - handle: image_name
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+  - handle: format
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+        enum:
+          - png
+          - jpeg
+  - handle: folder
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+        ui:widget: dir
+outputs_def:
+  - handle: min_image_address
+    serialize:
+      serializer: json
+      json_schema:
+        type: string

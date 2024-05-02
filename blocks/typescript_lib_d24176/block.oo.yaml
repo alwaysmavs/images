@@ -1,0 +1,17 @@
+type: task_block
+title: typescript_lib_d24176
+icon: https://static.oomol.com/icons/typescript.png
+executor:
+  name: node_executor
+  entry: index.ts
+inputs_def:
+  - handle: image_source
+    serialize:
+      serializer: json
+      json_schema:
+        type: string
+        ui:widget: file
+outputs_def:
+  - handle: image_address
+    serialize:
+      serializer: json

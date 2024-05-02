@@ -1,0 +1,28 @@
+nodes:
+  - task: ../../blocks/typescript_lib_201ef8/block.oo.yaml
+    node_id: 1ef8c0fd-195e-416e-a58c-99c2c0642e60
+    inputs_from:
+      - handle: image_address
+        from_node:
+          - node_id: 417634aa-f864-471d-b189-53b72901cab9
+            output_handle: image_address
+      - handle: image_name
+        cache:
+          initial_value: test
+      - handle: folder
+        cache:
+          initial_value: /oomol-storage/pdf
+      - handle: format
+        cache:
+          initial_value: jpeg
+    title: PNG 无损压缩
+  - task: ../../blocks/typescript_lib_d24176/block.oo.yaml
+    node_id: 417634aa-f864-471d-b189-53b72901cab9
+    inputs_from:
+      - handle: in
+        cache:
+          initial_value:
+      - handle: image_source
+        cache:
+          initial_value: /oomol-storage/pdf/test.png
+    title: 读取图片地址
