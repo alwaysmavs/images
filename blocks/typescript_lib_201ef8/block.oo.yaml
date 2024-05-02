@@ -15,14 +15,6 @@ inputs_def:
       serializer: json
       json_schema:
         type: string
-  - handle: format
-    serialize:
-      serializer: json
-      json_schema:
-        type: string
-        enum:
-          - png
-          - jpeg
   - handle: folder
     serialize:
       serializer: json
